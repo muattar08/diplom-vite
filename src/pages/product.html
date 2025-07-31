@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Товар - Uzum Market</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/product.css" />
+</head>
+<body>
+  <header>
+    <div class="container header">
+      <div class="header-left">
+        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="Logo" /></a>
+        <a href="../catalog.html" class="catalog-btn">Каталог</a>
+      </div>
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Искать товары" />
+        <button id="search-btn"><img src="../icons/search.jpg" alt="Search" /></button>
+      </div>
+      <nav>
+        <a href="../login.html"><img src="../icons/human.jpg" class="header-icon" alt="Profile" /></a>
+        <a href="../favorites.html">Избранное</a>
+        <a href="../korzina.html">Корзина <span id="cart-count">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="product-details" class="product-details"></div>
+
+    <h2 class="similar-title">Похожие товары</h2>
+    <div id="similar-products-container" class="products-container"></div>
+  </main>
+
+  <script src="../js/db.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/product.js"></script>
+</body>
+</html>

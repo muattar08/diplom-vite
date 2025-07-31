@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Корзина - Uzum Market</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/korzina.css" />
+</head>
+<body>
+  <header>
+    <div class="container header">
+      <div class="header-left">
+        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="Logo" /></a>
+        <a href="../catalog.html" class="catalog-btn">Каталог</a>
+      </div>
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Искать товары" />
+        <button id="search-btn"><img src="../icons/search.jpg" alt="Search" /></button>
+      </div>
+      <nav>
+        <a href="../login.html"><img src="../icons/human.jpg" class="header-icon" alt="Profile" /></a>
+        <a href="../favorites.html">Избранное</a>
+        <a href="../korzina.html">Корзина <span id="cart-count"></span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container cart-layout">
+
+    <div class="cart-left">
+
+      <div id="cart-header" class="cart-header hidden">
+        <h2>Корзина товаров</h2>
+      </div>
+
+      <div id="empty-cart-section" class="empty-cart hidden">
+        <img src="../images/shopocat 1.png" alt="Пусто" />
+        <h1>В корзине пока нет товаров</h1>
+        <p>Начните с подборок на главной странице или найдите нужный товар через поиск</p>
+      </div>
+
+      <div id="cart-container" class="cart-items-list"></div>
+    </div>
+    <div id="order-summary" class="order-summary hidden">
+      <h3>Ваш заказ</h3>
+      <hr />
+      <p><strong id="total-amount">0 сум</strong></p>
+      <p id="total-items">Итого товаров: 0</p>
+      <p id="total-discount">Итого скидки: 0 сум</p>
+      <button id="order-btn">Оформить заказ</button>
+    </div>
+
+  </main>
+
+  <script src="../js/db.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/korzina.js"></script>
+</body>
+</html>

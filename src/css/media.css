@@ -1,0 +1,22 @@
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    height: auto;
+    border-radius: 60px;
+    text-align: center;
+  }
+
+  .banner-content {
+    max-width: 90%;
+    margin-top: 20px;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    max-width: 100%;
+  }
+}

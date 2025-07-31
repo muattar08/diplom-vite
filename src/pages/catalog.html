@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Каталог - Uzum Market</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/catalog.css" />
+</head>
+<body>
+  <header>
+    <div class="container header">
+      <div class="header-left">
+        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="Logo" /></a>
+        <a href="../catalog.html" class="catalog-btn">Каталог</a>
+      </div>
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Искать товары" autocomplete="off" />
+        <div id="suggestions" class="suggestions-slider hidden"></div>
+        <button id="search-btn"><img src="../icons/search.jpg" alt="Search" /></button>
+      </div>
+      <nav>
+        <a href="../login.html"><img src="../icons/human.jpg" class="header-icon" alt="Profile" /></a>
+        <a href="../favorites.html">Избранное</a>
+        <a href="../korzina.html">Корзина <span id="cart-count">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="catalog-title">Категории товаров</h2>
+    <ul class="category-list" id="category-list"></ul>
+    <div id="category-products" class="products-container"></div>
+
+    <div class="popular-section">
+      <h2 class="catalog-title">Популярные товары</h2>
+      <div id="popular-products" class="products-container"></div>
+      <div id="blur-overlay" class="blur-overlay"></div>
+    </div>
+  </main>
+
+  <script src="../js/db.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/catalog.js"></script>
+</body>
+</html>

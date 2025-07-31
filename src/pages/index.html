@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uzum Market</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container header">
+      <div class="header-left">
+        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="Logo" /></a>
+        <a href="../catalog.html" class="catalog-btn">Каталог</a>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Искать товары" autocomplete="off" />
+        <div id="suggestions" class="suggestions-slider hidden"></div>
+        <button id="search-btn"><img src="../icons/search.jpg" alt="Search" /></button>
+      </div>
+
+      <nav>
+        <a href="../login.html"><img src="../icons/human.jpg" class="header-icon large" alt="Profile" /></a>
+        <a href="../favorites.html">Избранное</a>
+        <a href="../korzina.html">Корзина <span id="cart-count"></span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="banner">
+      <img src="../icons/left.png" alt="Left arrow" class="arrow left-arrow" />
+      <div class="banner-content">
+        <h1>Подсолнечное масло</h1>
+        <h1>30,000 сум</h1>
+        <p>
+          Станьте востребованным разработчиком. Вы изучите основы программирования и основные концепции компьютерных наук,
+          цифровые технологии, операционные системы, программное обеспечение, базы данных, системы аналитики, языки программирования и многое другое. Познакомитесь с тестированием и системным анализом. На программе
+          сможете сделать осознанный выбор специализации и технологий, прокачаться в выбранном направлении.
+        </p>
+      </div>
+      <img src="../icons/zagruzka.png" alt="Загрузка" class="zagruzka-icon" />
+      <img src="../icons/right.png" alt="Right arrow" class="arrow right-arrow" />
+    </section>
+
+    <section class="product-grid">
+      <h2>Популярное</h2>
+      <div id="popular-products" class="products-container"></div>
+      <button id="show-more-btn" class="show-more-btn">Показать ещё</button>
+
+      <h2>Спортивная одежда</h2>
+      <div id="sport-clothes-products-1" class="products-container"></div>
+
+      <h2>Активный отдых</h2>
+      <div id="active-products-1" class="products-container"></div>
+
+      <h2>Спортивная одежда</h2>
+      <div id="sport-clothes-products-2" class="products-container"></div>
+
+      <h2>Активный отдых</h2>
+      <div id="active-products-2" class="products-container"></div>
+    </section>
+  </main>
+
+  <script src="../js/db.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/home.js"></script>
+</body>
+
+</html>

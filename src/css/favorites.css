@@ -1,0 +1,119 @@
+.empty-favorites {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.empty-favorites h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.empty-favorites p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.empty-favorites img {
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.search-bar {
+  position: relative;
+  width: 100%;
+  max-width: 480px; /* немного короче */
+  margin: 0 auto;   /* центрирует, можешь заменить на right если нужно вправо */
+}
+
+#search-input {
+  width: 100%;
+  padding: 8px 40px 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+#search-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+#search-btn img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+
+
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.products-container .product-card {
+  width: 220px;
+  padding: 10px;
+  position: relative;
+  border-radius: 10px;
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.products-container .product-title {
+  font-size: 14px;
+  margin: 10px 0 0;
+}
+
+.products-container .product-price {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.products-container .product-image-container {
+  position: relative;
+}
+
+.products-container .product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.header-icon {
+  width: 13px;
+  height: 13px;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+.header-icon.large {
+  width: 13px;
+  height: 13px;
+  object-fit: cover;
+}
+
+.add-to-cart-icon {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 33px;
+  height: 33px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}

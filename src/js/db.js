@@ -1,4 +1,3 @@
-// js/db.js
 const goods = [
   {
     "id": 1,
@@ -772,9 +771,6 @@ const goods = [
     "type": "kitchen"
   }
 ];
-
-
-// ✅ db.js — хранение корзины и избранного для каждого номера телефона
 
 function getUser(phone) {
   const users = JSON.parse(localStorage.getItem('users') || '[]');

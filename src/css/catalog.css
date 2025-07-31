@@ -98,8 +98,8 @@
 .search-bar {
   position: relative;
   width: 100%;
-  max-width: 480px; /* немного короче */
-  margin: 0 auto;   /* центрирует, можешь заменить на right если нужно вправо */
+  max-width: 480px; 
+  margin: 0 auto;   
 }
 
 #search-input {

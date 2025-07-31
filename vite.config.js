@@ -2,9 +2,9 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 
 export default defineConfig({
-  root: 'src/pages',  // HTML-страницы находятся здесь
+  root: 'src/pages',
   build: {
-    outDir: '../../dist',  // Куда складывать собранный проект
+    outDir: '../../dist', 
     rollupOptions: {
       input: {
         index: resolve(__dirname, 'src/pages/index.html'),
@@ -16,5 +16,5 @@ export default defineConfig({
       }
     }
   },
-  publicDir: resolve(__dirname, 'src') // чтобы Vite нашёл изображения, иконки и т.п.
+  publicDir: resolve(__dirname, 'src') 
 })

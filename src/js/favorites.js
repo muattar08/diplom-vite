@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const favoritesContainer = document.getElementById('favorites-container');
   const emptyMessage = document.getElementById('empty-favorites');
 
-  const favorites = getFavorites(); // Получаем избранное ТЕКУЩЕГО пользователя
+  const favorites = getFavorites(); 
 
   if (favorites.length === 0) {
     emptyMessage.classList.remove('hidden');
@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     favoritesContainer.appendChild(card);
 
-    // Навигация на страницу товара
     card.querySelector('.product-image').addEventListener('click', () => {
       window.location.href = `product.html?id=${product.id}`;
     });
@@ -38,15 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.href = `product.html?id=${product.id}`;
     });
 
-    // Удаление из избранного
     const heartIcon = card.querySelector('.heart-icon');
     heartIcon.addEventListener('click', () => {
       const updatedFavorites = favorites.filter(id => id !== product.id);
       saveFavorites(updatedFavorites);
-      location.reload(); // перерисовка
+      location.reload(); 
     });
 
-    // Добавление в корзину
     const cartIcon = card.querySelector('.add-to-cart-icon');
     cartIcon.addEventListener('click', () => {
       addToCart(product.id);

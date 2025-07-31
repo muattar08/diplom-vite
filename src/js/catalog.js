@@ -1,5 +1,3 @@
-// 📁 catalog.js
-
 document.addEventListener('DOMContentLoaded', () => {
   const categoryList = document.getElementById('category-list');
   const productsContainer = document.getElementById('category-products');

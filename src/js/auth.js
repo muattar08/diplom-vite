@@ -1,11 +1,8 @@
-// ✅ auth.js — строгая изоляция пользователя по номеру телефона
-
 document.addEventListener('DOMContentLoaded', () => {
   const authForm = document.getElementById('auth-form');
   const phoneNumberInput = document.getElementById('phone-number');
   const authMessage = document.getElementById('auth-message');
 
-  // Очистим предыдущего пользователя при открытии страницы
   localStorage.removeItem('currentUserPhone');
 
   authForm.addEventListener('submit', (event) => {
@@ -15,11 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (phoneNumber) {
       localStorage.setItem('currentUserPhone', phoneNumber);
 
-      // Загрузка всех пользователей
       let users = JSON.parse(localStorage.getItem('users') || '[]');
       let userIndex = users.findIndex(u => u.phone === phoneNumber);
 
-      // Если пользователь не существует — создаём с пустыми данными
       if (userIndex === -1) {
         users.push({ phone: phoneNumber, cart: [], favorites: [] });
       }
@@ -40,14 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Удаляем отображение чужих данных при загрузке страницы
   const loginLink = document.querySelector('a[href="login.html"]');
   if (loginLink) {
     loginLink.innerHTML = `<img src="icons/human.jpg" alt="Profile"> Войти`;
   }
 });
 
-// 🔁 Использование user-specific хранилища
 function getCurrentUser() {
 const phone = localStorage.getItem("currentUserPhone");
 if (!phone) return null;

@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
     suggestions.classList.remove('hidden');
   });
 
-  // Скрыть подсказки при клике вне
   document.addEventListener('click', (e) => {
     if (!e.target.closest('.search-bar')) {
       suggestions.classList.add('hidden');

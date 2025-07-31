@@ -1,5 +1,3 @@
-// 🔐 Общие функции: корзина, избранное — строго по номеру телефона
-
 function getCurrentUser() {
   const phone = localStorage.getItem("currentUserPhone");
   if (!phone) return null;
@@ -17,7 +15,6 @@ function saveCurrentUserData(type, value) {
   localStorage.setItem("users", JSON.stringify(users));
 }
 
-// ⭐ Избранное
 function getFavorites() {
   return getCurrentUser()?.favorites || [];
 }
@@ -58,7 +55,6 @@ function markFavoriteHearts() {
   });
 }
 
-// 🛒 Корзина
 function getCart() {
   return getCurrentUser()?.cart || [];
 }
@@ -94,7 +90,6 @@ function updateCartCount() {
   if (el) el.textContent = count > 0 ? `(${count})` : '';
 }
 
-// 📦 Применение на всех страницах
 document.addEventListener("DOMContentLoaded", () => {
   updateCartCount();
   markFavoriteHearts();
